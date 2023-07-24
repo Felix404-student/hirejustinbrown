@@ -1,0 +1,44 @@
+
+.display-1 {
+    float: left;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height:8rem;
+}
+
+.smallpic {
+    width: 20% !important;
+    float: right;
+}
+
+.spacer {
+    width: 100%;
+    padding-top: 2rem;
+}
+
+hr {
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.textblock {
+    float:left;
+    width: 80% !important;
+}
+
+.blockquote {
+    float:left;
+}
+
+.embed-responsive {
+    padding-bottom:150%;
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.alert {
+    display: none;
+}

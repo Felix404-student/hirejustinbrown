@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Justin's Website</title>
+        <link rel="stylesheet" href="main.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            crossorigin="anonymous"
+        />
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </head>
+    <body>
+        <!-- site top image, disappears with scroll -->
+        <img
+            src="images/circuit-board.jpg"
+            id="top-image"
+            class="img-fluid"
+            alt="blue circuit board background image"
+        />
+        <!-- site navigation bar -->
+        <ul class="nav navbar-dark bg-dark sticky-top nav-tabs nav-fill justify-content-center" id="navbar">
+            <li class="nav-item">
+                <a class="nav-link active" id="nav-profile-link" aria-current="page" href="#"
+                    >Profile</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="nav-projects-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="nav-resume-link" href="#">Resume</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="nav-contact-link" href="#">Contact</a>
+            </li>
+        </ul>
+
+        <!-- email response message -->
+        <div class="alert alert-success" role="alert" id="email-alert">
+            Email sent successfully!
+          </div>
+
+        <!-- profile page container -->
+        <div class="container" id="profile-page-container">
+            <!-- page heading -->
+            <div class="container" id="profile-topper">
+                <div class="display-1">Profile</div>
+                <img
+                    src="images/profile-pic.jpg"
+                    id="prof-pic"
+                    class="img-fluid smallpic rounded float-end"
+                    alt="Profile picture"
+                />
+                <div class="blockquote">(reverse chronologically)</div>
+            </div>
+
+            <div class="container spacer">
+                <hr />
+            </div>
+            <!-- Text section 1 -->
+            <div class="container text" id="profile-blurb-1">
+                <div class="display-5">UMass Course</div>
+                <div class="p textblock">
+                    Nine-month online coding bootcamp is meant to help you get your first
+                    engineering position after graduation. You'll complete coding activities and
+                    projects comparable to those performed by software engineers on a daily basis.
+                    Many of these tasks will be portfolio-quality, demonstrating your capacity to
+                    work end-to-end on a development project during interviews. Sections on
+                    Front-end Development with JavaScript, Back-end Development with Python and
+                    Flask, Back-end Development with Node.js, Front-end Development with React.js,
+                    and Data Structures and Algorithms
+                </div>
+                <img
+                    src="images/bootcamp-pic.png"
+                    id="umass-pic"
+                    class="img-fluid smallpic rounded float-end"
+                    alt="Working on UMass coding bootcamp"
+                />
+            </div>
+            <div class="container spacer">
+                <hr />
+            </div>
+            <!-- Text section 2 -->
+            <div class="container" id="profile-blurb-2">
+                <div class="display-5">Segra</div>
+                <div class="p textblock">
+                    Providing support for Segra's fiber optic network for transport, IP, ethernet,
+                    fiber to the tower, last mile, PoP, and data installations. Prioritization and
+                    remediation of issues for network layers 1, 2, and 3 in a 24x7 network
+                    operations center. Heavy use of command line interface to install, manage, and
+                    troubleshoot Ciena, Cisco, and Nokia network switches and routers. Identifying
+                    and resolving outages for national telecom customers.
+                </div>
+                <img
+                    src="images/Segra-map.png"
+                    id="segra-pic"
+                    class="img-fluid smallpic rounded float-end"
+                    alt="Segra network map"
+                />
+            </div>
+            <div class="container spacer">
+                <hr />
+            </div>
+            <!-- Text section 3 -->
+            <div class="container" id="profile-blurb-3">
+                <div class="display-5">U of SC</div>
+                <div class="p textblock">
+                    Rigorous curriculum teaching the skills and knowledge required to design,
+                    develop, test, and produce computer programs. Focussed on writing programs in
+                    Java and C++. Included upper level calculus, a thorough understanding of
+                    algorithms, modern coding practices & networking.
+                </div>
+                <img
+                    src="images/UofSC-pic.jpg"
+                    id="uofsc-pic"
+                    class="img-fluid smallpic rounded float-end"
+                    alt="U of SC campus"
+                />
+            </div>
+            <div class="container spacer">
+                <hr />
+            </div>
+            <!-- Text section 4 -->
+            <div class="container text" id="profile-blurb-4">
+                <div class="display-5">Arabic Linguist</div>
+                <div class="p textblock">
+                    After being approved for TS//SCI clearance, I worked in a sensitive
+                    compartmented information facility (SCIF) on Fort Gordon, Georgia. Day to day
+                    work involved: Monitoring, translating, and transcribing foreign language
+                    communications, preparing formal intelligence reports for dissemination to the
+                    Intelligence Community. Developing previously unexploited sources of
+                    intelligence. Coordinating with peers across the US to verify and disseminate
+                    information. Referencing news reports, legal documents, and published works to
+                    verify intelligence. Providing leadership, guidance, and training to junior
+                    personnel.
+                </div>
+                <img
+                    src="images/Ft-Gordon.png"
+                    id="ft-gordon-pic"
+                    class="img-fluid smallpic rounded float-end"
+                    alt="Joint Service formation outside SCIF (Justin holding Marines flag)"
+                />
+                <div class="p textblock">
+                    I also had the opportunity to complete the USMC Martial Arts Instructor (MAI)
+                    course at Fort Gordon, and the Water Survival - Advanced course at Camp Lejeune,
+                    NC.
+                </div>
+            </div>
+            <div class="container spacer">
+                <hr />
+            </div>
+            <!-- Text section 5 -->
+            <div class="container text" id="profile-blurb-4">
+                <div class="display-5">Marines</div>
+                <div class="p textblock">
+                    After completing Basic Training on Parris Island, SC, I flew across the country
+                    to the Defense Language Institute Foreign Language Center in Monterey,
+                    California. DLIFLC trains members of all four branches of the military, the
+                    Coast Guard, and the State Department in mission-relevant foereign languages.
+                    The Middle East School provide 64-weeks of instruction in Modern Standard Arabic
+                    (MSA) in the Egyptian, Iraqi, and Levantine dialects. Dialects are taught from
+                    the beginning in the classroom, along with foundational MSA each day. A key
+                    component of DLIFLC's success in teaching foreign language so effectively is the
+                    highly educated faculty who are motivated to teach their language and culture to
+                    American students. The instructors, 98 percent of whom are native speakers of
+                    the language they teach, take great pride in preparing students to serve their
+                    country.
+                </div>
+                <img
+                    src="images/DLI-class.png"
+                    id="ft-gordon-pic"
+                    class="img-fluid smallpic rounded float-end"
+                    alt="Joint service class at DLI (Justin on the right)"
+                />
+            </div>
+        </div>
+
+        <!-- Projects page container -->
+        <div class="container" id="projects-page-container">
+            <div class="display-1">Projects</div>
+            <div id="projects-carousel" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button
+                        type="button"
+                        data-bs-target="#projects-carousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#projects-carousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#projects-carousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#projects-carousel"
+                        data-bs-slide-to="3"
+                        aria-label="Slide 4"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#projects-carousel"
+                        data-bs-slide-to="4"
+                        aria-label="Slide 5"
+                    ></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/demo-jeopardy.png" class="d-block w-100" alt="Jeopardy!" />
+                        <div class="carousel-caption">
+                            <h5>Jeopardy!</h5>
+                            <p>
+                                Single player version of jeopardy which pulls questions and answers
+                                from the JService API. Click once to pick a question, again to see
+                                the answer, and a 3rd time to dismiss it (changes to blank square).
+                                Features Single, Double, and Final Jeopardy, as well as a replay
+                                option which resets the game without reloading the page.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item d-none d-md-block">
+                        <img
+                            src="images/demo-hackorsnooze.png"
+                            class="d-block w-100"
+                            alt="Hack Or Snooze"
+                        />
+                        <div class="carousel-caption">
+                            <h5>Hack Or Snooze</h5>
+                            <p>
+                                A play on 'HackerNews'. Lets users make accounts with username and
+                                password. Logging in lets users post links everyone can see,
+                                favorite links, and delete the ones they've posted. States persist
+                                across page reloads.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item d-none d-md-block">
+                        <img src="images/demo-memory.png" class="d-block w-100" alt="Memory!" />
+                        <div class="carousel-caption">
+                            <h5>Memory!</h5>
+                            <p>
+                                Play the classic game of Memory! Click to reveal a pair of cards.
+                                Try to remember their position and match all of the pairs of colors.
+                                Saves high scores locally.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item d-none d-md-block">
+                        <img
+                            src="images/demo-tv.png"
+                            class="d-block w-100"
+                            alt="TV Database Lookup"
+                        />
+                        <div class="carousel-caption">
+                            <h5>TV Database Lookup</h5>
+                            <p>
+                                Frontend UI for the Maze TV Database. Search for a TV show, and
+                                click to show the cast and episodes by season.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item d-none d-md-block">
+                        <img
+                            src="images/demo-connect4.png"
+                            class="d-block w-100"
+                            alt="Connect 4!"
+                        />
+                        <div class="carousel-caption">
+                            <h5>Connect 4!</h5>
+                            <p>
+                                Play the classic game of Connect 4 (also called Captain's Mistress),
+                                either with a partner or against yourself! Click on the top circle
+                                with the arrow in it to play a piece in that column. Whose turn it
+                                is is displayed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev"
+                >
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next"
+                >
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Resume page container -->
+        <div class="container" id="resume-page-container">
+            <div class="display-1">Resumé</div>
+            <div class="embed-responsive" id="embedded-resume-pdf">
+                <object
+                    data="images/resume.pdf"
+                    type="application/pdf"
+                    width="100%"
+                    height="100%"
+                ></object>
+            </div>
+        </div>
+
+        <!-- Contacts page container -->
+        <div class="container" id="contact-page-container">
+            <div class="display-1">Contact Info:</div>
+            <div class="p textblock">Email: <b>justinhbrown@gmail.com</b></div>
+            <div class="p textblock">Phone: <b>(631 972-5156)</b></div>
+            <div class="container spacer">
+                <hr />
+            </div>
+            <!-- Email form -->
+            <div class="display-5">Send me a message!</div>
+            <form id="email-form" method="post">
+                <div class="mb-5 row">
+                    <div class="col">
+                        <label for="email-name">Name</label>
+                        <input
+                            type="text"
+                            required
+                            maxlength="30"
+                            class="form-control"
+                            id="email-name"
+                        />
+                    </div>
+                </div>
+                <div class="mb-5 row">
+                    <div class="col">
+                        <label for="email-addr">Email address</label>
+                        <input
+                            type="email"
+                            required
+                            maxlength="50"
+                            class="form-control"
+                            id="email-addr"
+                            placeholder="name@example.com"
+                        />
+                    </div>
+                </div>
+                <div class="mb-5 row">
+                    <div class="col">
+                        <label for="email-subject">Subject</label>
+                        <input
+                            type="text"
+                            required
+                            maxlength="75"
+                            class="form-control"
+                            id="email-subject"
+                        />
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <label for="email-message">Message</label>
+                    <textarea class="form-control" id="email-message" rows="5" required></textarea>
+                </div>
+                <button type="submit" id="send-email-btn" class="btn btn-primary px-4 btn-lg">Send</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <!-- Standard button -->
+            <button type="button" class="btn btn-default">Default</button>
+
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-primary">Primary</button>
+
+            <!-- Indicates a successful or positive action -->
+            <button type="button" class="btn btn-success">Success</button>
+
+            <!-- Contextual button for informational alert messages -->
+            <button type="button" class="btn btn-info">Info</button>
+
+            <!-- Indicates caution should be taken with this action -->
+            <button type="button" class="btn btn-warning">Warning</button>
+
+            <!-- Indicates a dangerous or potentially negative action -->
+            <button type="button" class="btn btn-danger">Danger</button>
+        </div>
+
+        <div class="footer">Written by Justin Brown using Bootstrap 5.3</div>
+
+        <script src="https://unpkg.com/jquery"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"
+        ></script>
+        <script src="bootstrap-site.js"></script>
+    </body>
+</html>
