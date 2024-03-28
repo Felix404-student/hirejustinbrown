@@ -12,6 +12,7 @@
             crossorigin="anonymous"
         />
         <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     </head>
     <body>
         <!-- site top image, disappears with scroll -->
@@ -42,7 +43,10 @@
         <!-- email response message -->
         <div class="alert alert-success" role="alert" id="email-alert">
             Email sent successfully!
-          </div>
+        </div>
+        <div class="alert alert-danger" role="alert" id="email-alert-fail">
+            That didn't work! 🙁 
+        </div>
 
         <!-- profile page container -->
         <div class="container" id="profile-page-container">
@@ -216,9 +220,26 @@
                         data-bs-slide-to="4"
                         aria-label="Slide 5"
                     ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#projects-carousel"
+                        data-bs-slide-to="5"
+                        aria-label="Slide 6"
+                    ></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
+                        <img src="images/demo-hotsauce.png" class="d-block w-100" alt="Hot Sauce App" />
+                        <div class="carousel-caption">
+                            <h5>Hot Sauce App</h5>
+                            <p>
+                                A hosted database-backed app for rating different hot sauces. You can
+                                make an account, log in, rate the sauces already in the databse, and 
+                                add new sauces, including choosing an icon.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item d-none d-md-block">
                         <img src="images/demo-jeopardy.png" class="d-block w-100" alt="Jeopardy!" />
                         <div class="carousel-caption">
                             <h5>Jeopardy!</h5>
@@ -333,7 +354,7 @@
             </div>
             <!-- Email form -->
             <div class="display-5">Send me a message!</div>
-            <form id="email-form" method="post">
+            <form action="emailHandler.php" id="email-form" method="post">
                 <div class="mb-5 row">
                     <div class="col">
                         <label for="email-name">Name</label>
